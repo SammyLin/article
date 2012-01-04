@@ -8,7 +8,7 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'simple_form'
 gem 'json'
-
+gem 'tinymce-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
