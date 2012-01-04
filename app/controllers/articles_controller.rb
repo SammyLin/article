@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-
+    @article.user_id = current_user.id
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, :notice => 'Article was successfully created.' }
