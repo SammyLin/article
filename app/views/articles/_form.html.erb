@@ -1,4 +1,4 @@
-<%= simple_form_for @article do |f| %>
+<%= simple_form_for @article , :html => { :multipart => true } do |f| %>
 <%= f.input :Title %>
 <%= f.input :Slug %>
 <%= f.input :Description %>
@@ -6,16 +6,16 @@
 <%= f.input :Post_status %>
 <%= f.input :Post_date %>
 <%= f.input :hit_count %>
-
-<%= text_area_tag :Context, "", :rows => 40, :cols => 120 %>
-
+<%= f.input :Content, :input_html => { :class => 'tb_Content'} %>
+<%= f.input :excerpt_image %>
 <script type="text/javascript">
   $(function() {
-    $('textarea').tinymce({
-      theme: 'advanced'
+    $('#article_Content').tinymce({
+      theme: 'simple'
     });
   });
 </script>
+
 <%= f.submit %>
 
 <% end %>
