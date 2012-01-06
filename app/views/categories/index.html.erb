@@ -1,0 +1,14 @@
+
+<h1>Listing category</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= link_to category.name , category_path(category.slug) %></td>
+</tr>
+<% end %>
+</table>
