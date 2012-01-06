@@ -3,18 +3,35 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Slug</th>
     <th>Description</th>
+    <th>Content</th>
+    <th>Post type</th>
+    <th>Post status</th>
     <th>Post date</th>
     <th>Hit count</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @articles.each do |article| %>
   <tr>
-    <td><%= link_to article.Title , article%></td>
+    <td><%= article.Title %></td>
+    <td><%= article.Slug %></td>
     <td><%= article.Description %></td>
+    <td><%= article.Content %></td>
+    <td><%= article.Post_type %></td>
+    <td><%= article.Post_status %></td>
     <td><%= article.Post_date %></td>
     <td><%= article.hit_count %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
+<br />
+
+<%= link_to 'New Article', new_article_path %>

@@ -39,10 +39,11 @@
   <b>Hit count:</b>
   <%= @article.hit_count %>
 </p>
-<% if @article.excerpt_image? %>
+<% if @article.excerpt_image %>
 <p>
   <%= image_tag @article.excerpt_image.url(:medium) %>
 </p>
 <% end %>
 
+<%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
