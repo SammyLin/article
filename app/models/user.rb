@@ -8,3 +8,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   has_many :articles
 end
+
+def is_admin?
+  is_admin
+end
+
