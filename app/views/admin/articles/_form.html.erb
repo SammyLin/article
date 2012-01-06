@@ -1,6 +1,7 @@
 <%= f.input :Title %>
 <%= f.input :Slug %>
 <%= f.input :Description %>
+<%= f.association :categories,:as => :check_boxes %>
 <%= f.input :Post_type %>
 <%= f.input :Post_status %>
 <%= f.input :Post_date %>

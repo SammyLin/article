@@ -2,6 +2,7 @@ Tcoc::Application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :articles
+    resources :categories
   end
   resources :articles
   root :to => "articles#index"
