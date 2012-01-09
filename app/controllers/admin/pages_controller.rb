@@ -2,7 +2,7 @@ class Admin::PagesController < ApplicationController
   layout 'admin'
   before_filter 'require_is_admin'
   def index
-    @pages = Page.all
+    @pages = Page.paginate(:page => params[:page] ,:per_page => 20)
     respond_to do |format|
       format.html
       format.json { render :json => @pages}
