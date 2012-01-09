@@ -1,0 +1,5 @@
+<h1>Edit Pages</h1>
+<%= simple_form_for @page , :url => admin_page_path(@page) , :html => { :multipart => true } do |f|  %>
+<%= render :partial => 'form' , :locals => { :f => f} %>
+<% end %>
+

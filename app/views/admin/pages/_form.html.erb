@@ -1,0 +1,14 @@
+<%= f.input :title %>
+<%= f.input :slug %>
+<%= f.input :parent %>
+<%= f.input :context %>
+<%= f.input :excerpt_image %>
+<%= f.submit %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#page_context').tinymce({
+      theme: 'advanced'
+    });
+  });
+</script>

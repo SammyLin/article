@@ -5,6 +5,7 @@
    <% if current_user && current_user.is_admin? %>
      <%= link_to 'admin category panel' , admin_categories_path %>
      <%= link_to 'admin article panel' , admin_articles_path %>
+     <%= link_to 'admin page panel' , admin_pages_path %>
    <% end %>
   <% else %>
      <%= link_to "Sign in " , new_user_session_path %>

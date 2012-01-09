@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120106081954) do
+ActiveRecord::Schema.define(:version => 20120109035658) do
 
   create_table "article_categoryships", :force => true do |t|
     t.integer  "article_id"
@@ -44,6 +44,20 @@ ActiveRecord::Schema.define(:version => 20120106081954) do
     t.integer  "parent",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "context"
+    t.integer  "parent"
+    t.integer  "user_id"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "excerpt_image_file_name"
+    t.string   "excerpt_image_content_type"
+    t.integer  "excerpt_image_file_size"
+    t.datetime "excerpt_image_updated_at"
   end
 
   create_table "users", :force => true do |t|
